@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChooseContentMainActivity">
+
+    <TextView
+        android:id="@+id/title_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:fontFamily="sans-serif"
+        android:text="Play Music Video"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <RadioGroup
+        android:id="@+id/audio_video_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audio"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/track_selector"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/audio_video_selector"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_bg"
+        android:popupBackground="@android:color/holo_blue_light"
+        android:spinnerMode="dropdown"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+//    configurations.all {
+//        resolutionStrategy {
+//            resolutionStrategy.eachDependency { details ->
+//                if (details.requested.group == 'androidx.core') {
+//                    details.useVersion "1.0.0-rc01"
+//                }
+//                if (details.requested.group == 'androidx.lifecycle') {
+//                    details.useVersion "1.0.0-rc01"
+//                }
+//                if (details.requested.group == 'androidx.versionedparcelable') {
+//                    details.useVersion "1.0.0-rc01"
+//                }
+//                if (details.requested.group == 'androidx.fragment') {
+//                    details.useVersion "1.0.0-rc01"
+//                }
+//                if (details.requested.group == 'androidx.appcompat') {
+//                    details.useVersion "1.0.0-rc01"
+//                }
+//            }
+//        }
+//    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+//    implementation("androidx.appcompat:appcompat:1.0.0-rc01"){
+//        exclude group: 'com.android.support'
+//        exclude module: 'appcompat-v7'
+//        exclude module: 'support-v4'
+//    }
+//    implementation 'androidx.annotation:annotation:1.0.0-rc01'
+//    implementation 'androidx.legacy:legacy-support-core-ui:1.0.0-rc01'
+//    implementation 'androidx.fragment:fragment:1.0.0-rc01'
+//    implementation 'com.google.android.material:material:1.0.0-rc01'
+
+        implementation 'com.google.android.exoplayer:exoplayer-core:2.7.2'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.7.2'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.7.2'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.7.2'
+
+}
